@@ -1,0 +1,22 @@
+import time
+from datetime import datetime
+
+def set_alarm():
+    alarm_time = input("Enter alarm time (HH:MM): ")
+    print("Alarm set!")
+    
+    while True:
+        current_time = datetime.now().strftime("%H:%M")
+        if current_time == alarm_time:
+            print("Time to wake up!")
+            break
+        time.sleep(30)  # Check every 30 seconds
+
+set_alarm()
+Sample Output:
+
+less
+Copy code
+Enter alarm time (HH:MM): 15:30
+Alarm set!
+Time to wake up!
